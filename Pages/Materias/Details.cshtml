@@ -1,0 +1,43 @@
+@page
+@model SHNAR.Pages.Materias.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Materia</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Materia.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Materia.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Materia.Creditos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Materia.Creditos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Materia.MaestroNombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Materia.MaestroNombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Materia.InscripcionFecha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Materia.InscripcionFecha)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Materia.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

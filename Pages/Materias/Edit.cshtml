@@ -1,0 +1,50 @@
+@page
+@model SHNAR.Pages.Materias.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Materia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Materia.ID" />
+            <div class="form-group">
+                <label asp-for="Materia.Nombre" class="control-label"></label>
+                <input asp-for="Materia.Nombre" class="form-control" />
+                <span asp-validation-for="Materia.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Materia.Creditos" class="control-label"></label>
+                <input asp-for="Materia.Creditos" class="form-control" />
+                <span asp-validation-for="Materia.Creditos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Materia.MaestroNombre" class="control-label"></label>
+                <input asp-for="Materia.MaestroNombre" class="form-control" />
+                <span asp-validation-for="Materia.MaestroNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Materia.InscripcionFecha" class="control-label"></label>
+                <input asp-for="Materia.InscripcionFecha" class="form-control" />
+                <span asp-validation-for="Materia.InscripcionFecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

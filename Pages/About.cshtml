@@ -1,0 +1,31 @@
+@page
+@model SHNAR.Pages.AboutModel
+
+@{
+    ViewData["Title"] = "Estadísticas del cuerpo estudiantil";
+}
+
+<h2>Estadísticas del cuerpo estudiantil</h2>
+
+<table>
+    <tr>
+        <th>
+            Fecha de Inscripcion
+        </th>
+        <th>
+            Alumno
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Alumnos)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InscripcionFecha)
+            </td>
+            <td>
+                @item.AlumnoCount
+            </td>
+        </tr>
+    }
+</table>
